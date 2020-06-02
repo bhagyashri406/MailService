@@ -17,6 +17,7 @@ import com.socialmedia.mailservice.model.User;
 public class QueueConsumer {
 
 	Logger logger = LoggerFactory.getLogger(getClass());
+	String EVENT_SEND_MAIL = "SendMail";
 
 	@Autowired
 	private MailService notificationService;
@@ -39,7 +40,7 @@ public class QueueConsumer {
 			logger.info("Received (dto) " + dto.getEvent());
 			logger.info("Received (dto) " + dto.getUsername());
 
-			if (dto.getEvent().equals("SendMail")) {
+			if (dto.getEvent().equals(EVENT_SEND_MAIL)) {
 
 				User user = new User();
 				user.setUsername(dto.getUsername());
@@ -49,7 +50,7 @@ public class QueueConsumer {
 
 			} else {
 
-				logger.error("Received (errot) " + dto.getEvent().equals("SendMail"));
+				logger.error("Received (errot) " + dto.getEvent().equals(EVENT_SEND_MAIL));
 			}
 
 			// mailServiceImpl.sendMail(mailDTO, null);

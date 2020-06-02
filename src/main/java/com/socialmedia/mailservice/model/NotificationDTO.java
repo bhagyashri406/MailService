@@ -4,7 +4,7 @@ public class NotificationDTO {
 
 	private String event;
 	private int Userid;
-	private String username;
+	private String Username;
 
 	public String getEvent() {
 		return event;
@@ -23,11 +23,11 @@ public class NotificationDTO {
 	}
 
 	public String getUsername() {
-		return username;
+		return Username;
 	}
 
 	public void setUsername(String username) {
-		this.username = username;
+		this.Username = username;
 	}
 
 	public NotificationDTO() {
@@ -38,7 +38,7 @@ public class NotificationDTO {
 		super();
 		this.event = event;
 		this.Userid = userid;
-		this.username = username;
+		this.Username = username;
 	}
 
 }

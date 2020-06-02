@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.socialmedia.mailservice.MailService;
 import com.socialmedia.mailservice.model.User;
 
-
 @RestController
 public class RegistrationController {
 
@@ -31,7 +30,7 @@ public class RegistrationController {
 		 * Creating a User with the help of User class that we have declared and setting
 		 * Email address of the sender.
 		 */
-		user.setUsername("bhagyashri406@gmail.com");  //Receiver's email address
+		user.setUsername("abc@gmail.com"); // Receiver's email address
 		/*
 		 * Here we will call sendEmail() for Sending mail to the sender.
 		 */
@@ -55,7 +54,7 @@ public class RegistrationController {
 		 * Creating a User with the help of User class that we have declared and setting
 		 * Email address of the sender.
 		 */
-		user.setUsername("bhagyashri406@gmail.com"); //Receiver's email address
+		user.setUsername("abc@gmail.com"); // Receiver's email address
 
 		/*
 		 * Here we will call sendEmailWithAttachment() for Sending mail to the sender
